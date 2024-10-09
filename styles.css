@@ -1,4 +1,4 @@
-
+/* Loader */
 .loader-overlay {
     position: fixed;
     top: 0;
@@ -29,9 +29,9 @@ body.loading {
     top: 40%;
     left: 40%;
     position: absolute;
-  }
-  
-  .loader:before, .loader:after {
+}
+
+.loader:before, .loader:after {
     --r: -6deg;
     content: "";
     position: absolute;
@@ -40,18 +40,18 @@ body.loading {
     top: 80%;
     box-shadow: 0 16px 12px var(--shadow);
     transform: rotate(var(--r));
-  }
-  
-  .loader:before {
+}
+
+.loader:before {
     left: 4px;
-  }
-  
-  .loader:after {
+}
+
+.loader:after {
     --r: 6deg;
     right: 4px;
-  }
-  
-  .loader div {
+}
+
+.loader div {
     width: 100%;
     height: 100%;
     border-radius: 13px;
@@ -60,16 +60,16 @@ body.loading {
     perspective: 600px;
     box-shadow: 0 4px 6px var(--shadow);
     background-image: var(--background);
-  }
-  
-  .loader div ul {
+}
+
+.loader div ul {
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative;
-  }
-  
-  .loader div ul li {
+}
+
+.loader div ul li {
     --r: 180deg;
     --o: 0;
     --c: var(--page);
@@ -82,48 +82,48 @@ body.loading {
     transform: rotateY(var(--r));
     -webkit-animation: var(--duration) ease infinite;
     animation: var(--duration) ease infinite;
-  }
-  
-  .loader div ul li:nth-child(2) {
+}
+
+.loader div ul li:nth-child(2) {
     --c: var(--page-fold);
     -webkit-animation-name: page-2;
     animation-name: page-2;
-  }
-  
-  .loader div ul li:nth-child(3) {
+}
+
+.loader div ul li:nth-child(3) {
     --c: var(--page-fold);
     -webkit-animation-name: page-3;
     animation-name: page-3;
-  }
-  
-  .loader div ul li:nth-child(4) {
+}
+
+.loader div ul li:nth-child(4) {
     --c: var(--page-fold);
     -webkit-animation-name: page-4;
     animation-name: page-4;
-  }
-  
-  .loader div ul li:nth-child(5) {
+}
+
+.loader div ul li:nth-child(5) {
     --c: var(--page-fold);
     -webkit-animation-name: page-5;
     animation-name: page-5;
-  }
-  
-  .loader div ul li svg {
+}
+
+.loader div ul li svg {
     width: 90px;
     height: 120px;
     display: block;
-  }
-  
-  .loader div ul li:first-child {
+}
+
+.loader div ul li:first-child {
     --r: 0deg;
     --o: 1;
-  }
-  
-  .loader div ul li:last-child {
+}
+
+.loader div ul li:last-child {
     --o: 1;
-  }
-  
-  .loader span {
+}
+
+.loader span {
     display: block;
     left: 0;
     right: 0;
@@ -131,92 +131,98 @@ body.loading {
     margin-top: 20px;
     text-align: center;
     color: var(--text);
-  }
-  
-  @keyframes page-2 {
-    0% {
-      transform: rotateY(180deg);
-      opacity: 0;
-    }
-  
-    20% {
-      opacity: 1;
-    }
-  
-    35%, 100% {
-      opacity: 0;
-    }
-  
-    50%, 100% {
-      transform: rotateY(0deg);
-    }
-  }
-  
-  @keyframes page-3 {
-    15% {
-      transform: rotateY(180deg);
-      opacity: 0;
-    }
-  
-    35% {
-      opacity: 1;
-    }
-  
-    50%, 100% {
-      opacity: 0;
-    }
-  
-    65%, 100% {
-      transform: rotateY(0deg);
-    }
-  }
-  
-  @keyframes page-4 {
-    30% {
-      transform: rotateY(180deg);
-      opacity: 0;
-    }
-  
-    50% {
-      opacity: 1;
-    }
-  
-    65%, 100% {
-      opacity: 0;
-    }
-  
-    80%, 100% {
-      transform: rotateY(0deg);
-    }
-  }
-  
-  @keyframes page-5 {
-    45% {
-      transform: rotateY(180deg);
-      opacity: 0;
-    }
-  
-    65% {
-      opacity: 1;
-    }
-  
-    80%, 100% {
-      opacity: 0;
-    }
-  
-    95%, 100% {
-      transform: rotateY(0deg);
-    }
-  }
-  
+}
 
-  :root {
+@keyframes page-2 {
+    0% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    35%, 100% {
+        opacity: 0;
+    }
+
+    50%, 100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes page-3 {
+    15% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+
+    65%, 100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes page-4 {
+    30% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    65%, 100% {
+        opacity: 0;
+    }
+
+    80%, 100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes page-5 {
+    45% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    80%, 100% {
+        opacity: 0;
+    }
+
+    95%, 100% {
+        transform: rotateY(0deg);
+    }
+}
+
+/* General Styles */
+:root {
     --fondos: #0b1350;
     --textos: white;
 }
-body{
-cursor:url("../recursos/imagenes/cursor/espada.png"),auto;
+
+body {
+    cursor: url("../recursos/imagenes/cursor/espada.png"), auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+/* Header */
 .cont-header {
     height: 100vh;
     width: 100%;
@@ -246,6 +252,7 @@ cursor:url("../recursos/imagenes/cursor/espada.png"),auto;
     z-index: 2; /* El título permanece sobre el fondo y la animación */
 }
 
+/* Background Blob */
 .bg {
     position: absolute;
     top: 0;
@@ -264,7 +271,7 @@ cursor:url("../recursos/imagenes/cursor/espada.png"),auto;
     z-index: 0;
     top: 50%;
     left: 50%;
-    width: 300px; /* Tamaño ajustado para un blob grande detrás del título */
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     background-color: #ff0000;
@@ -295,87 +302,42 @@ cursor:url("../recursos/imagenes/cursor/espada.png"),auto;
     }
 }
 
-/* Si hay un menú que debe estar por encima, ajusta su z-index también */
-.menu {
-    z-index: 2;
-}
-
+/* Cards */
 .card-container {
     display: flex;
-    gap: 40px; /* Espacio entre las tarjetas */
-    justify-content: center; /* Centrar las tarjetas en la página */
+    gap: 40px;
+    justify-content: center;
     padding: 20px;
 }
 
 .card2 {
-    width: 220px; /* Aumentamos el ancho de la tarjeta */
-    height: auto; /* Ajustamos para que el contenido determine la altura */
+    width: 220px;
+    height: auto;
     border-radius: 20px;
     background: #e0e0e0;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    padding: 50px; /* Espacio interno */
+    padding: 50px;
     text-align: center;
 }
 
 .card-title {
-    font-size: 24px; /* Título más grande */
-    font-weight: bold; /* Negritas */
-    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .card-text {
-    font-size: 16px; /* Texto más grande */
+    font-size: 16px;
     text-align: justify;
 }
-/* Para pantallas grandes (desktop) */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-.cont-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-}
-
-.titulo {
-    flex: 1;
-    text-align: center;
-}
-
-.texto-titulo {
-    color: #fff;
-    font-size: 2.5em;
-}
-
-/* Cards */
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.card2 {
-    width: 30%;
-    padding: 15px;
-    background-color: #f4f4f4;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Para pantallas medianas (tablets) */
+/* Media Queries */
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .card2 {
         width: 80%;
         margin: 20px 0;
@@ -386,40 +348,27 @@ body {
     }
 }
 
-/* Para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .cont-header {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        justify-content: flex-start;
     }
 
-    .texto-titulo {
-        font-size: 1.5em;
+    .titulo h1 {
+        font-size: 40px;
     }
 
     .card2 {
         width: 90%;
-        margin: 10px 0;
+        padding: 30px;
     }
-}
-/* Ajusta el tamaño del texto para pantallas móviles */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 36px;
-    }
-}
 
-/* Ajusta para pantallas medianas (tabletas) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    h1 {
-        font-size: 48px;
+    .card-title {
+        font-size: 20px;
     }
-}
 
-/* Para pantallas grandes (escritorios) */
-@media (min-width: 1025px) {
-    h1 {
-        font-size: 72px;
+    .card-text {
+        font-size: 14px;
     }
 }
