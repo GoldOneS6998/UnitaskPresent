@@ -350,6 +350,7 @@ body {
 
 @media (max-width: 480px) {
     .cont-header {
+        height:150%;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
