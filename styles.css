@@ -403,3 +403,23 @@ body {
         margin: 10px 0;
     }
 }
+/* Ajusta el tamaño del texto para pantallas móviles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* Ajusta para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 72px;
+    }
+}
